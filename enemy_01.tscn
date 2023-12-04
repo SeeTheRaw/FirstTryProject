@@ -1,0 +1,132 @@
+[gd_scene load_steps=18 format=3 uid="uid://bxotmm74m2nwn"]
+
+[ext_resource type="Script" path="res://enemy_01.gd" id="1_2uncd"]
+[ext_resource type="Texture2D" uid="uid://coa16xx3nt6ps" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Idle/FTPEnemy01Idle00.png" id="1_bnagx"]
+[ext_resource type="Texture2D" uid="uid://b28ltc0xs6hby" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Attack/FTPEnemy01Attack03.png" id="1_chgyh"]
+[ext_resource type="Texture2D" uid="uid://toev5lofr3g1" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Idle/FTPEnemy01Idle01.png" id="2_dok2b"]
+[ext_resource type="Texture2D" uid="uid://6xyjigt5g8jd" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Attack/FTPEnemy01Attack04.png" id="2_tqoiv"]
+[ext_resource type="Texture2D" uid="uid://deuttqblxyqcq" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Attack/FTPEnemy01Attack05.png" id="3_sj2ui"]
+[ext_resource type="Texture2D" uid="uid://cr2psxvsaj58d" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Idle/FTPEnemy01Idle02.png" id="3_w52of"]
+[ext_resource type="Texture2D" uid="uid://43ja2jxq7r1e" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Attack/FTPEnemy01Attack06.png" id="4_77wrf"]
+[ext_resource type="Texture2D" uid="uid://bykssirwl4g1" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Idle/FTPEnemy01Idle03.png" id="4_f2re2"]
+[ext_resource type="Texture2D" uid="uid://drqi73ifud8tc" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Attack/FTPEnemy01Attack00.png" id="9_ruhiq"]
+[ext_resource type="Texture2D" uid="uid://dturriw5awdco" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Attack/FTPEnemy01Attack01.png" id="10_3scju"]
+[ext_resource type="Texture2D" uid="uid://cl8wv0q4ixe4" path="res://FirstTryProjectArtSprites/FTPEnemies/Enemy01Attack/FTPEnemy01Attack02.png" id="11_nt1gf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlpfh"]
+size = Vector2(16.0785, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2a5n1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_chgyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tqoiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sj2ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_77wrf")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("1_bnagx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dok2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w52of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f2re2")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bnagx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ruhiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3scju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nt1gf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nt1gf")
+}, {
+"duration": 30.0,
+"texture": ExtResource("11_nt1gf")
+}, {
+"duration": 30.0,
+"texture": ExtResource("11_nt1gf")
+}, {
+"duration": 30.0,
+"texture": ExtResource("11_nt1gf")
+}, {
+"duration": 30.0,
+"texture": ExtResource("11_nt1gf")
+}],
+"loop": true,
+"name": &"Notice",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6ka8"]
+size = Vector2(208, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_650kc"]
+size = Vector2(56, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_algrk"]
+size = Vector2(18, 17)
+
+[node name="Enemy01" type="CharacterBody2D"]
+script = ExtResource("1_2uncd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.995116, 1)
+shape = SubResource("RectangleShape2D_xlpfh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.094, 0.099)
+sprite_frames = SubResource("SpriteFrames_2a5n1")
+animation = &"Notice"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(-24, 0.5)
+shape = SubResource("RectangleShape2D_b6ka8")
+
+[node name="PlayerChase" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerChase"]
+position = Vector2(-4, 0.5)
+shape = SubResource("RectangleShape2D_650kc")
+
+[node name="PlayerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_algrk")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerChase" to="." method="_on_player_chase_body_entered"]
+[connection signal="body_exited" from="PlayerChase" to="." method="_on_player_chase_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
