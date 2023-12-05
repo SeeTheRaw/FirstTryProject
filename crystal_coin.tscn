@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://c43uqbdmg4kwr"]
+
+[ext_resource type="Script" path="res://crystal_coin.gd" id="1_dpcev"]
+[ext_resource type="Texture2D" uid="uid://5f7ojj6bt7s1" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin00.png" id="2_dvcdf"]
+[ext_resource type="Texture2D" uid="uid://do7d6h0wnvdql" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin01.png" id="3_y4jao"]
+[ext_resource type="Texture2D" uid="uid://u8ioavlnb7lg" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin02.png" id="4_2hhu7"]
+[ext_resource type="Texture2D" uid="uid://dsf83ho50aqmb" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin03.png" id="5_6nrx7"]
+[ext_resource type="Texture2D" uid="uid://cluk7f35f7k7f" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin04.png" id="6_eo3pc"]
+[ext_resource type="Texture2D" uid="uid://dubiuhivpte4h" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin05.png" id="7_gi87n"]
+[ext_resource type="Texture2D" uid="uid://btca8t11fyinq" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin06.png" id="8_1dy42"]
+[ext_resource type="Texture2D" uid="uid://dg7yh86qm2teb" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin07.png" id="9_sx3r5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xvkbg"]
+radius = 87.4643
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ddh3o"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_dvcdf")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_y4jao")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_2hhu7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_6nrx7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_eo3pc")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_gi87n")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_1dy42")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_sx3r5")
+}, {
+"duration": 15.0,
+"texture": ExtResource("9_sx3r5")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}]
+
+[node name="CrystalCoin" type="Area2D"]
+script = ExtResource("1_dpcev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xvkbg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -7)
+sprite_frames = SubResource("SpriteFrames_ddh3o")
+animation = &"Default"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
