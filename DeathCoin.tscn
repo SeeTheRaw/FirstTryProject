@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxoifsdd63g5t"]
+
+[ext_resource type="Texture2D" uid="uid://ceshfgph6nria" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin00.png" id="1_h8bot"]
+[ext_resource type="Script" path="res://DeathCoin.gd" id="1_q2o02"]
+[ext_resource type="Texture2D" uid="uid://cu2dbr7woqumg" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin01.png" id="2_3sx65"]
+[ext_resource type="Texture2D" uid="uid://c868ckhwko0er" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin02.png" id="3_fh8ik"]
+[ext_resource type="Texture2D" uid="uid://cujaepye3mb5e" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin03.png" id="4_sl5ck"]
+[ext_resource type="Texture2D" uid="uid://sfmgfxc0xobn" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin04.png" id="5_l5ii8"]
+[ext_resource type="Texture2D" uid="uid://c1hkytv1oydpw" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin05.png" id="6_d3bkf"]
+[ext_resource type="Texture2D" uid="uid://chasq36xubave" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin06.png" id="7_g6481"]
+[ext_resource type="Texture2D" uid="uid://bluegiuajl5eo" path="res://FirstTryProjectArtSprites/FTPDeathCoin/FTPDeathCoin07.png" id="8_a5a87"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mswgo"]
+radius = 93.0054
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q8bk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h8bot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3sx65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fh8ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sl5ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l5ii8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d3bkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g6481")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a5a87")
+}, {
+"duration": 15.0,
+"texture": ExtResource("8_a5a87")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DeathCoin" type="Area2D"]
+script = ExtResource("1_q2o02")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mswgo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -8)
+sprite_frames = SubResource("SpriteFrames_q8bk7")
+frame_progress = 0.462141
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

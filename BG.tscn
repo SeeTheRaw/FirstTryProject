@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dkmb2f4pg2x8q" path="res://FirstTryProjectArtSprites/FTPBackground01+++REV.png" id="6_r2e76"]
 
 [node name="BG" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
 script = ExtResource("1_h8guh")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]

@@ -70,10 +70,10 @@ region = Rect2(0, 0, 265, 265)
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ultv"]
 animations = [{
 "frames": [{
-"duration": 0.41,
+"duration": 0.71,
 "texture": ExtResource("2_dya78")
 }, {
-"duration": 0.31,
+"duration": 0.41,
 "texture": ExtResource("3_lfj4n")
 }, {
 "duration": 0.31,
@@ -379,6 +379,7 @@ shape = SubResource("RectangleShape2D_s3sty")
 scale = Vector2(0.086, 0.089)
 sprite_frames = SubResource("SpriteFrames_8ultv")
 animation = &"Death"
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
