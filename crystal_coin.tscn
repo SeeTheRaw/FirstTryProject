@@ -58,5 +58,6 @@ shape = SubResource("CircleShape2D_xvkbg")
 position = Vector2(2, -7)
 sprite_frames = SubResource("SpriteFrames_ddh3o")
 animation = &"Default"
+frame_progress = 0.779906
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
