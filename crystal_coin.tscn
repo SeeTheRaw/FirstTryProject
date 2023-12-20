@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c43uqbdmg4kwr"]
+[gd_scene load_steps=14 format=3 uid="uid://c43uqbdmg4kwr"]
 
 [ext_resource type="Script" path="res://crystal_coin.gd" id="1_dpcev"]
 [ext_resource type="Texture2D" uid="uid://5f7ojj6bt7s1" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin00.png" id="2_dvcdf"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dubiuhivpte4h" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin05.png" id="7_gi87n"]
 [ext_resource type="Texture2D" uid="uid://btca8t11fyinq" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin06.png" id="8_1dy42"]
 [ext_resource type="Texture2D" uid="uid://dg7yh86qm2teb" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoin07.png" id="9_sx3r5"]
+[ext_resource type="Texture2D" uid="uid://cyfv30uld8xa7" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoinPickedUP00.png" id="10_7iwx2"]
+[ext_resource type="Texture2D" uid="uid://cjapgibfby5nv" path="res://FirstTryProjectArtSprites/FTPCrystalCoin/FTPCrystalCoinPickedUP01.png" id="11_5lfhf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xvkbg"]
 radius = 87.4643
@@ -46,6 +48,20 @@ animations = [{
 "loop": true,
 "name": &"Default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7iwx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5lfhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7iwx2")
+}],
+"loop": true,
+"name": &"PickedUP",
+"speed": 5.0
 }]
 
 [node name="CrystalCoin" type="Area2D"]
@@ -58,6 +74,5 @@ shape = SubResource("CircleShape2D_xvkbg")
 position = Vector2(2, -7)
 sprite_frames = SubResource("SpriteFrames_ddh3o")
 animation = &"Default"
-frame_progress = 0.779906
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

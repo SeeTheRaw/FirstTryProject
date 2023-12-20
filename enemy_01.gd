@@ -63,6 +63,7 @@ func _on_player_death_body_entered(body):
 		notice = false
 		chase = false
 		velocity.x = 0
+		SPEED = 0
 		body.HP -= 1
 	
 	

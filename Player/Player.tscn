@@ -452,6 +452,7 @@ shape = SubResource("RectangleShape2D_s3sty")
 scale = Vector2(0.086, 0.089)
 sprite_frames = SubResource("SpriteFrames_8ultv")
 animation = &"Death"
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
