@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var HP = 1
 var SPEED = 300.0
-var JUMP_VELOCITY = -479.0
+var JUMP_VELOCITY = -485.0
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

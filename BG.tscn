@@ -11,54 +11,106 @@
 scroll_ignore_camera_zoom = true
 script = ExtResource("1_h8guh")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+[node name="Muro grotta" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="FtpBackground01+" type="Sprite2D" parent="ParallaxLayer"]
+[node name="FtpBackground01+" type="Sprite2D" parent="Muro grotta"]
 position = Vector2(576, 380)
 scale = Vector2(0.702439, 0.927854)
 texture = ExtResource("2_wo3bn")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+[node name="Muro grotta2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="FtpBackground01++" type="Sprite2D" parent="ParallaxLayer2"]
+[node name="FtpBackground01+" type="Sprite2D" parent="Muro grotta2"]
+position = Vector2(2880, 380)
+scale = Vector2(0.702, 0.928)
+texture = ExtResource("2_wo3bn")
+
+[node name="Ombre stalattiti" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="FtpBackground01++" type="Sprite2D" parent="Ombre stalattiti"]
 position = Vector2(576, 396.5)
 scale = Vector2(0.703726, 0.711849)
 texture = ExtResource("3_7l8mm")
 
-[node name="Void01" type="ParallaxLayer" parent="."]
+[node name="Ombre stalattiti2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="FtpBackground01void" type="Sprite2D" parent="Void01"]
+[node name="FtpBackground01++" type="Sprite2D" parent="Ombre stalattiti2"]
+position = Vector2(2880, 396.5)
+scale = Vector2(0.704, 0.712)
+texture = ExtResource("3_7l8mm")
+
+[node name="VoidUP" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="FtpBackground01void" type="Sprite2D" parent="VoidUP"]
 position = Vector2(816, 880)
 texture = ExtResource("4_bua34")
 
-[node name="Void02" type="ParallaxLayer" parent="."]
+[node name="VoidUP2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(1, 0)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="FtpBackground01void" type="Sprite2D" parent="Void02"]
+[node name="FtpBackground01void" type="Sprite2D" parent="VoidUP2"]
+position = Vector2(1968, 880)
+texture = ExtResource("4_bua34")
+
+[node name="VoidDWN" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="FtpBackground01void" type="Sprite2D" parent="VoidDWN"]
 position = Vector2(816, 1064)
 texture = ExtResource("4_bua34")
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+[node name="VoidDWN2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="FtpBackground01void" type="Sprite2D" parent="VoidDWN2"]
+position = Vector2(1968, 1064)
+texture = ExtResource("4_bua34")
+
+[node name="Colonne e stalattiti" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="FtpBackground01+++" type="Sprite2D" parent="ParallaxLayer3"]
+[node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti"]
 position = Vector2(576, 456)
 scale = Vector2(0.701583, 0.844486)
 texture = ExtResource("4_ww6jk")
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+[node name="Colonne e stalattiti2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="FtpBackground01+++" type="Sprite2D" parent="ParallaxLayer4"]
+[node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti2"]
+position = Vector2(2880, 456)
+scale = Vector2(0.701583, 0.844486)
+texture = ExtResource("4_ww6jk")
+
+[node name="Colonne e stalattiti FONDALE" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti FONDALE"]
 position = Vector2(576, 1344)
+scale = Vector2(0.701583, 0.844486)
+texture = ExtResource("6_r2e76")
+
+[node name="Colonne e stalattiti FONDALE2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti FONDALE2"]
+position = Vector2(2880, 1344)
 scale = Vector2(0.701583, 0.844486)
 texture = ExtResource("6_r2e76")
