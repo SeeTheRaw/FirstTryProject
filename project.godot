@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="FirstTry Project"
+config/name="Deep Seeker"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://FTPGameIcon.png"
 
 [autoload]
 
