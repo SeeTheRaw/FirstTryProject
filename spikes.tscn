@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bteksttfa1fut"]
+
+[ext_resource type="Script" path="res://Obstacles Scripts/Spikes.gd" id="1_ayf05"]
+[ext_resource type="Texture2D" uid="uid://c7qxj458im382" path="res://FirstTryProjectArtSprites/FTPSpikes.png" id="2_3ql0t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jswit"]
+size = Vector2(58, 15)
+
+[node name="Spikes" type="StaticBody2D"]
+position = Vector2(2436, 602)
+script = ExtResource("1_ayf05")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.933333, 1)
+texture = ExtResource("2_3ql0t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_jswit")
+
+[node name="DeathArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_jswit")
+
+[connection signal="body_entered" from="DeathArea" to="." method="_on_death_area_body_entered"]
