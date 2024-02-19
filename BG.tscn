@@ -84,7 +84,7 @@ motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti"]
-position = Vector2(576, 448)
+position = Vector2(576, 392)
 scale = Vector2(0.701583, 0.844486)
 texture = ExtResource("4_ww6jk")
 
@@ -93,7 +93,7 @@ motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti2"]
-position = Vector2(2880, 448)
+position = Vector2(2880, 392)
 scale = Vector2(0.701583, 0.844486)
 texture = ExtResource("4_ww6jk")
 
@@ -102,7 +102,7 @@ motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti FONDALE"]
-position = Vector2(576, 1344)
+position = Vector2(576, 1288)
 scale = Vector2(0.701583, 0.844486)
 texture = ExtResource("6_r2e76")
 
@@ -111,6 +111,6 @@ motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="FtpBackground01+++" type="Sprite2D" parent="Colonne e stalattiti FONDALE2"]
-position = Vector2(2880, 1344)
+position = Vector2(2880, 1288)
 scale = Vector2(0.701583, 0.844486)
 texture = ExtResource("6_r2e76")

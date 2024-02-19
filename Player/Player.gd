@@ -22,7 +22,6 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if HP == 1:
-		print(direction)
 		if direction == -1 :
 			get_node("AnimatedSprite2D").flip_h = true
 		elif direction == 1 :
@@ -46,6 +45,9 @@ func _physics_process(delta):
 		JUMP_VELOCITY = 0
 		gravity = 0
 		anim.play("Death")
-		await anim.animation_finished
-		queue_free()
-		get_tree().change_scene_to_file("res://main.tscn")
+func _on_animation_player_animation_finished(_Death):
+	if Checkpoint.check_point_active == true:
+			get_tree().reload_current_scene()
+	else:
+			get_tree().change_scene_to_file("res://main.tscn")
+	

@@ -14,7 +14,7 @@ func _physics_process(delta):
 	if notice == true:
 		get_node("AnimatedSprite2D").play("Notice")
 		player = get_node("../../Player/Player")
-		var direction = (player.position - self.position).normalized()
+		var direction = (player.global_position - self.global_position).normalized()
 		if direction.x > 0:
 			get_node("AnimatedSprite2D").flip_h = true
 			
@@ -30,7 +30,7 @@ func _physics_process(delta):
 	if chase == true:
 		get_node("AnimatedSprite2D").play("Attack")
 		player = get_node("../../Player/Player")
-		var direction = (player.position - self.position).normalized()
+		var direction = (player.global_position - self.global_position).normalized()
 
 		if direction.x > 0:
 			get_node("AnimatedSprite2D").flip_h = true
@@ -65,5 +65,3 @@ func _on_player_death_body_entered(body):
 		velocity.x = 0
 		SPEED = 0
 		body.HP -= 1
-	
-	

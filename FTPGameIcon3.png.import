@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf0fwradb7yhv"
-path="res://.godot/imported/FTPGameIcon.png-0f06df2b9210ba9160c0ee8818ea01d6.ctex"
+uid="uid://cjp7mwfxn5e36"
+path="res://.godot/imported/FTPGameIcon3.png-0f49d0bc4fc6ae4e7a16030c55655711.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FTPGameIcon.png"
-dest_files=["res://.godot/imported/FTPGameIcon.png-0f06df2b9210ba9160c0ee8818ea01d6.ctex"]
+source_file="res://FTPGameIcon3.png"
+dest_files=["res://.godot/imported/FTPGameIcon3.png-0f49d0bc4fc6ae4e7a16030c55655711.ctex"]
 
 [params]
 
