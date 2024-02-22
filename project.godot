@@ -19,7 +19,6 @@ config/icon="res://FTPGameIcon3.png"
 
 Game="*res://Global/Game.gd"
 Utils="*res://Global/Utils.gd"
-Checkpoint="*res://Global/Checkpoint.gd"
 
 [rendering]
 

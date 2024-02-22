@@ -40,7 +40,10 @@ func _physics_process(delta):
 			velocity.x = direction.x * SPEED
 	else:
 		velocity.x = 0 
-		
+
+
+#Area2D code
+
 func _on_player_detection_body_entered(body):
 	if body.name == "Player":
 		notice = true
@@ -57,11 +60,8 @@ func _on_player_chase_body_exited(body):
 	if body.name == "Player":
 		chase = false
 
-
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
 		notice = false
 		chase = false
-		velocity.x = 0
-		SPEED = 0
 		body.HP -= 1

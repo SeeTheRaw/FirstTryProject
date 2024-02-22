@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Player
 var HP = 1
 var SPEED = 300.0
 var JUMP_VELOCITY = -485.0
@@ -9,6 +10,10 @@ var JUMP_VELOCITY = -485.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 		
+
+func _ready():
+	Game.player = self
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -46,8 +51,4 @@ func _physics_process(delta):
 		gravity = 0
 		anim.play("Death")
 func _on_animation_player_animation_finished(_Death):
-	if Checkpoint.check_point_active == true:
-			get_tree().reload_current_scene()
-	else:
-			get_tree().change_scene_to_file("res://main.tscn")
-	
+	Game.respawn_Player()

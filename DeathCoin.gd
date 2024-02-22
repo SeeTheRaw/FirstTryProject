@@ -9,4 +9,4 @@ func _on_body_entered(body):
 		body.HP -= 1
 		get_node("AnimatedSprite2D").play("pickedUP")
 		await get_node("AnimatedSprite2D").animation_finished
-		queue_free()
+		get_node("AnimatedSprite2D").play("default")
